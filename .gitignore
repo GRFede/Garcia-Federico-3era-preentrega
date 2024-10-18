@@ -283,3 +283,17 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/django,python,visualstudiocode
+
+#La Herencia del HTML se aplica en header y footer
+
+#La clase models se aplica con Personal
+
+#El formulario de creacio con una vista
+
+#Una pagina que tenga el listado, con el formulario de busquedas. Con dos o tres busquedas
+
+#Estructura: gitignore(db, entorno virtual) que sea como la vimos en clase,
+#template dentro o fuera de la aplicacion. mejor si esta dentro
+#formulario de django
+#requierements.txt subirlo
+#agregar el archivo readme(borrar algunas cosas de estas)
