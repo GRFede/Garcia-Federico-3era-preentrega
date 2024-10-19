@@ -25,3 +25,7 @@ def crear_persona(request):
     persona.save()
 
     return render(request, 'persona.html')
+
+def buscar_persona(request):
+
+    return render(request, 'buscar_persona.html', {'persona' : ''})

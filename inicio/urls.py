@@ -1,5 +1,5 @@
 from django.urls import path
-from inicio.views import inicio, principal,crear_persona,resume,contacto,proyectos
+from inicio.views import inicio, principal,crear_persona,resume,contacto,proyectos,buscar_persona
 
 
 urlpatterns = [
@@ -9,5 +9,7 @@ urlpatterns = [
     path('resume/', resume, name='resume'),
     path('contact/', contacto, name='contacto'),
     path('projects/', proyectos, name='proyectos'),
+    path('buscar-persona/', buscar_persona, name='buscar_persona'),
+
 
 ]

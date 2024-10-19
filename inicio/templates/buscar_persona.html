@@ -1,0 +1,10 @@
+
+{% extends "base.html" %}
+
+{% block title_head %} Buscar persona {% endblock title_head %}
+
+{% block header %} 
+<h1>Buscar Personas</h1>
+<form action={% url "buscar_persona" %}></form>
+
+{% endblock header %}
