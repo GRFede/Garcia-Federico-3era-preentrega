@@ -6,4 +6,22 @@
 {% block header %} 
 <h1>Buscar Personas</h1>
 
+<form action={% url "buscar_persona" %}>
+
+    {{form}}
+    <input type="submit", value="Buscar">
+    
+    
+</form>
+    {% if personas %}
+    <ul>
+        {% for persona in personas %}
+        <li>{{persona}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay Personas registradas.</p>
+    {% endif %}
+    
+
 {% endblock header %}

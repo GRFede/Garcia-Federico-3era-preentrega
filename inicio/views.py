@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from inicio.models import Personales
-from inicio.forms import CrearPersonalFormulario
+from inicio.forms import CrearPersonalFormulario,BuscarPersonalFormulario
 
 # Create your views here.
 
@@ -33,4 +33,12 @@ def crear_personales(request):
     return render(request, 'crear_personales.html', {'form' : formulario})
 
 def buscar_persona(request):
-    return render(request, 'buscar_persona.html', {'persona' : ''})
+
+    formulario = BuscarPersonalFormulario(request.GET)
+    if formulario.is_valid():
+        apellidos=formulario.cleaned_data.get('apellidos')
+        personas=Personales.objects.filter(apellidos__icontains=apellidos)
+    else:
+        personas= Personales.objects.all()  
+
+    return render(request, 'buscar_persona.html', {'personas' : personas, 'form': formulario})

@@ -11,3 +11,5 @@ class Personales(models.Model):
     nombres =models.CharField(max_length=20)
     apellidos =models.CharField(max_length=20)
     edad =models.IntegerField()
+    def __str__(self):
+        return f'{self.id} {self.nombres}{self.apellidos}{self.edad}'
