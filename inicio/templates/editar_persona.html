@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title_head %} Editar personas {% endblock title_head %}
+
+{% block header %} 
+<h1>Editar Personas</h1>
+<form action={% url "editar_persona" persona.id %} method="POST">
+    {% csrf_token %} 
+    
+    {{form}}
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock header %}

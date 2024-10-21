@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block title_head %} Inicio {% endblock title_head %}
+
+{% block tittle_header %}Puedo ayudar a su negocio{% endblock tittle_header %}
+
+{% block header %} 
+<h1>Ver Personas</h1>
+
+<ul>
+    <li>Nombre: {{persona.nombres}}</li>
+    <li>Apellido: {{persona.apellidos}}</li>
+    <li>Edad: {{persona.edad}}</li>
+</ul>
+
+
+{% endblock header %}
